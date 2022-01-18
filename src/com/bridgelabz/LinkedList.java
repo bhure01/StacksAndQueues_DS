@@ -64,19 +64,32 @@ public class LinkedList {
         }
     }
 
-    //Method to Delete First Node from Linked List
+    // method to delete the First Node from the Linked List
     public void pop() {
         if(head == null) {
-            System.out.println("Linked List is Empty.");
+            System.out.println("Linked List is Empty");
         } else {
             head = head.next;
         }
     }
 
-    //Method to Delete Last Node from Linked List
+    // created a method for peak pop in Stack
+    public void peakPop() {
+        if(head == null) {
+            System.out.println("Stack is Empty");
+        } else {
+            while(head != null) {
+                System.out.println("Deleted : "+head.data);
+                head = head.next;
+            }
+            head = null;
+        }
+    }
+
+    // method to delete the Last Node from the Linked List
     public void popLast() {
         if(head == null) {
-            System.out.println("Linked List is Empty.");
+            System.out.println("Linked List is Empty");
         } else {
             Node second_Last = head;
             while(second_Last.next.next != null)
@@ -85,10 +98,10 @@ public class LinkedList {
         }
     }
 
-    //Method to Search given Node in Linked List
+    // search for a particular given Node in the Linked List
     public void searchNode(int data) {
         if(head == null) {
-            System.out.println("Linked List is Empty.");
+            System.out.println("Linked List is Empty");
         } else {
             int foundLocation = 1;
             Node temp = head;
@@ -102,7 +115,7 @@ public class LinkedList {
         }
     }
 
-    //Method to Insert Given Node at Specific Location
+    // Insert the given Node at a particular Location
     public void insertAtLocation(int data,int nthdata) {
         Node newNode = new Node(data);
         if(head == null) {
@@ -117,13 +130,12 @@ public class LinkedList {
                     temp.next = newNode;
                     newNode.next = nextNode;
                 }
-//                System.out.print(temp.data + " -> ");
                 temp = temp.next;
             }
         }
     }
 
-    //Method to Get Size of Linked List
+    // finding the size of Linked List
     public int size() {
         int count = 0;
         if(head == null) {
@@ -138,10 +150,10 @@ public class LinkedList {
         return count;
     }
 
-    //Method to Delete Given Node from Linked List
+    // delete the given Node from Linked List
     public void deleteNode(int data) {
         if(head == null) {
-            System.out.println("Linked List is Empty.");
+            System.out.println("Linked List is Empty");
         } else {
             if(data == head.data) {
                 head = head.next;
@@ -159,10 +171,10 @@ public class LinkedList {
         }
     }
 
-    //Display Node in Linked List
+    // show the Node in Linked List
     public void showLinkedList() {
         if(head == null) {
-            System.out.println("Linked List is Empty.");
+            System.out.println("Linked List is Empty");
         } else {
             Node temp = head;
             while (temp != null) {

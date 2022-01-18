@@ -2,10 +2,8 @@ package com.bridgelabz;
 
 import  java.util.Scanner;
 
-/* UC1- Ability to create a Stack of 56->30->70
-        - Use LinkedList to do the Stack Operations
-        - Here push will internally call add method on LinkedList.
-        - So 70 will be added first then 30 and then 56 to make 56 on top of the Stack */
+/* UC2-Ability to peak and pop from the Stack till it is empty 56->30->70
+        - Use LinkedList to do the Stack Operations */
 
 public class StackAndQueue {
     public static void main(String[] args) {
@@ -27,6 +25,7 @@ public class StackAndQueue {
                     linkedList.insertFirst(dataFirst);
                     break;
                 case 2:
+                    linkedList.peakPop();
                     break;
                 case 3:
                     linkedList.showLinkedList();
