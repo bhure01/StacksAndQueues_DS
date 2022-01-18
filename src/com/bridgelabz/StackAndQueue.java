@@ -2,8 +2,10 @@ package com.bridgelabz;
 
 import  java.util.Scanner;
 
-/* UC2-Ability to peak and pop from the Stack till it is empty 56->30->70
-        - Use LinkedList to do the Stack Operations */
+/* UC3- Ability to create a Queue of 56->30->70
+        - Use LinkedList to do the Queue Operations
+        - Here enqueue will internally call append method on LinkedList.
+        - So 56 will be added first then 30 and then 70 to make 56 on top of the Stack */
 
 public class StackAndQueue {
     public static void main(String[] args) {
@@ -31,13 +33,16 @@ public class StackAndQueue {
                     linkedList.showLinkedList();
                     break;
                 case 4:
+                    System.out.println("Enter the Data to Enqueue in Queue: ");
+                    linkedList.insertLast(sc.nextInt());
                     break;
                 case 5:
                     break;
                 case 6:
+                    linkedList.showLinkedList();
                     break;
             }
         }
-        while(choice != 6);
+        while(choice != 7);
     }
 }
