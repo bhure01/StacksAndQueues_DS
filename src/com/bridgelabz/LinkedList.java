@@ -74,7 +74,7 @@ public class LinkedList {
     }
 
     // created a method for peak pop in Stack
-    public void peakPop() {
+    public void peakPop(String stack) {
         if(head == null) {
             System.out.println("Stack is Empty");
         } else {
